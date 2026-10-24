@@ -1,0 +1,187 @@
+<!doctype html>
+<html lang="ro">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ALVIA · Agende 2027</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&amp;display=swap">
+<style>
+body{margin:0;background:#FFFFFF}
+a{color:inherit}
+[id]{scroll-margin-top:112px}
+.lnk{color:#A23D97;text-decoration:none}
+.lnk-d{color:#D88BCD;text-decoration:none}
+.lnk:hover,.lnk-d:hover{text-decoration:underline;text-underline-offset:3px}
+.nav-a{text-decoration:none;color:#3A3A3C;transition:color .2s ease}
+.nav-a:hover{color:#111111}
+.pill{transition:background-color .2s ease}
+.pill:hover{background:#333336 !important}
+.pill-w:hover{background:#E8E8ED !important}
+.ph img{transition:transform .6s ease}
+.ph:hover img{transform:scale(1.02)}
+.card-a{text-decoration:none;color:inherit}
+.faq summary{list-style:none;cursor:pointer}
+.faq summary::-webkit-details-marker{display:none}
+.faq .pm{transition:transform .25s ease}
+.faq details[open] .pm{transform:rotate(45deg)}
+.pk{position:relative}
+.pk-r{position:absolute;opacity:0;pointer-events:none;width:1px;height:1px}
+.pk-i,.pk-n{display:none}
+.sw{cursor:pointer;transition:box-shadow .2s ease}
+.lb{display:none}
+.lb:target{display:flex}
+html.js-reveal .reveal{opacity:0;transform:translateY(16px);transition:opacity .7s ease, transform .7s ease}
+html.js-reveal .reveal.in{opacity:1;transform:none}
+:focus-visible{outline:2px solid #A23D97;outline-offset:3px}
+input::placeholder,textarea::placeholder{color:#86868B}
+@media (prefers-reduced-motion: reduce){.ph img,.faq .pm{transition:none}html.js-reveal .reveal{opacity:1;transform:none;transition:none}}
+#eco-0:checked ~ .pk-stage .eco-i0{display:block}#eco-0:checked ~ .pk-info .eco-n0{display:inline}#eco-0:checked ~ .pk-info label[for="eco-0"]{box-shadow:0 0 0 2px #FFFFFF,0 0 0 4px #111111 !important}#eco-0:focus-visible ~ .pk-info label[for="eco-0"]{outline:2px solid #A23D97;outline-offset:4px}#eco-1:checked ~ .pk-stage .eco-i1{display:block}#eco-1:checked ~ .pk-info .eco-n1{display:inline}#eco-1:checked ~ .pk-info label[for="eco-1"]{box-shadow:0 0 0 2px #FFFFFF,0 0 0 4px #111111 !important}#eco-1:focus-visible ~ .pk-info label[for="eco-1"]{outline:2px solid #A23D97;outline-offset:4px}#eco-2:checked ~ .pk-stage .eco-i2{display:block}#eco-2:checked ~ .pk-info .eco-n2{display:inline}#eco-2:checked ~ .pk-info label[for="eco-2"]{box-shadow:0 0 0 2px #FFFFFF,0 0 0 4px #111111 !important}#eco-2:focus-visible ~ .pk-info label[for="eco-2"]{outline:2px solid #A23D97;outline-offset:4px}#eco-3:checked ~ .pk-stage .eco-i3{display:block}#eco-3:checked ~ .pk-info .eco-n3{display:inline}#eco-3:checked ~ .pk-info label[for="eco-3"]{box-shadow:0 0 0 2px #FFFFFF,0 0 0 4px #111111 !important}#eco-3:focus-visible ~ .pk-info label[for="eco-3"]{outline:2px solid #A23D97;outline-offset:4px}#eco-4:checked ~ .pk-stage .eco-i4{display:block}#eco-4:checked ~ .pk-info .eco-n4{display:inline}#eco-4:checked ~ .pk-info label[for="eco-4"]{box-shadow:0 0 0 2px #FFFFFF,0 0 0 4px #111111 !important}#eco-4:focus-visible ~ .pk-info label[for="eco-4"]{outline:2px solid #A23D97;outline-offset:4px}#lux-0:checked ~ .pk-stage .lux-i0{display:block}#lux-0:checked ~ .pk-info .lux-n0{display:inline}#lux-0:checked ~ .pk-info label[for="lux-0"]{box-shadow:0 0 0 2px #FFFFFF,0 0 0 4px #111111 !important}#lux-0:focus-visible ~ .pk-info label[for="lux-0"]{outline:2px solid #A23D97;outline-offset:4px}#lux-1:checked ~ .pk-stage .lux-i1{display:block}#lux-1:checked ~ .pk-info .lux-n1{display:inline}#lux-1:checked ~ .pk-info label[for="lux-1"]{box-shadow:0 0 0 2px #FFFFFF,0 0 0 4px #111111 !important}#lux-1:focus-visible ~ .pk-info label[for="lux-1"]{outline:2px solid #A23D97;outline-offset:4px}#lux-2:checked ~ .pk-stage .lux-i2{display:block}#lux-2:checked ~ .pk-info .lux-n2{display:inline}#lux-2:checked ~ .pk-info label[for="lux-2"]{box-shadow:0 0 0 2px #FFFFFF,0 0 0 4px #111111 !important}#lux-2:focus-visible ~ .pk-info label[for="lux-2"]{outline:2px solid #A23D97;outline-offset:4px}#lux-3:checked ~ .pk-stage .lux-i3{display:block}#lux-3:checked ~ .pk-info .lux-n3{display:inline}#lux-3:checked ~ .pk-info label[for="lux-3"]{box-shadow:0 0 0 2px #FFFFFF,0 0 0 4px #111111 !important}#lux-3:focus-visible ~ .pk-info label[for="lux-3"]{outline:2px solid #A23D97;outline-offset:4px}#lux-4:checked ~ .pk-stage .lux-i4{display:block}#lux-4:checked ~ .pk-info .lux-n4{display:inline}#lux-4:checked ~ .pk-info label[for="lux-4"]{box-shadow:0 0 0 2px #FFFFFF,0 0 0 4px #111111 !important}#lux-4:focus-visible ~ .pk-info label[for="lux-4"]{outline:2px solid #A23D97;outline-offset:4px}#lux-5:checked ~ .pk-stage .lux-i5{display:block}#lux-5:checked ~ .pk-info .lux-n5{display:inline}#lux-5:checked ~ .pk-info label[for="lux-5"]{box-shadow:0 0 0 2px #FFFFFF,0 0 0 4px #111111 !important}#lux-5:focus-visible ~ .pk-info label[for="lux-5"]{outline:2px solid #A23D97;outline-offset:4px}#ecolux-0:checked ~ .pk-stage .ecolux-i0{display:block}#ecolux-0:checked ~ .pk-info .ecolux-n0{display:inline}#ecolux-0:checked ~ .pk-info label[for="ecolux-0"]{box-shadow:0 0 0 2px #FFFFFF,0 0 0 4px #111111 !important}#ecolux-0:focus-visible ~ .pk-info label[for="ecolux-0"]{outline:2px solid #A23D97;outline-offset:4px}#ecolux-1:checked ~ .pk-stage .ecolux-i1{display:block}#ecolux-1:checked ~ .pk-info .ecolux-n1{display:inline}#ecolux-1:checked ~ .pk-info label[for="ecolux-1"]{box-shadow:0 0 0 2px #FFFFFF,0 0 0 4px #111111 !important}#ecolux-1:focus-visible ~ .pk-info label[for="ecolux-1"]{outline:2px solid #A23D97;outline-offset:4px}#ecolux-2:checked ~ .pk-stage .ecolux-i2{display:block}#ecolux-2:checked ~ .pk-info .ecolux-n2{display:inline}#ecolux-2:checked ~ .pk-info label[for="ecolux-2"]{box-shadow:0 0 0 2px #FFFFFF,0 0 0 4px #111111 !important}#ecolux-2:focus-visible ~ .pk-info label[for="ecolux-2"]{outline:2px solid #A23D97;outline-offset:4px}</style>
+<style>html,body{margin:0;background:#FFFFFF;overflow-x:hidden}[hidden]{display:none!important}</style>
+</head>
+<body>
+<div data-name="Alvia · Agende 2027 · v3 · 1440" style="width: 1440px; font-family: 'Manrope', 'Satoshi', system-ui, sans-serif; color: #111111; background: #FFFFFF; -webkit-font-smoothing: antialiased">
+<header aria-label="Navigare" data-name="Navigare" style="position: sticky; top: 0; z-index: 30; width: 1440px; box-sizing: border-box; height: 48px; padding: 0 120px; background: rgba(255,255,255,0.85); -webkit-backdrop-filter: saturate(180%) blur(20px); backdrop-filter: saturate(180%) blur(20px); border-bottom: 1px solid rgba(0,0,0,0.06); display: grid; grid-template-columns: 1fr auto 1fr; align-items: center">
+<a href="index.html" aria-label="Alvia, pagina principală" style="display: flex; justify-self: start"><img src="img/logo-horizontal-black.svg" alt="Alvia" style="height: 20px; width: auto; display: block"></a>
+<nav aria-label="Meniu" style="display: flex; align-items: center; gap: 40px; font-size: 13px; line-height: 16px; font-weight: 500">
+<a class="nav-a" href="agende.html" aria-current="page" style="color: #A23D97">Agende</a>
+<a class="nav-a" href="portofoliu.html">Portofoliu</a>
+<a class="nav-a" href="tehnologii.html">Tehnologii</a>
+<a class="nav-a" href="cataloage.html">Cataloage</a>
+<a class="nav-a" href="contacte.html">Contacte</a>
+</nav>
+<div style="justify-self: end; display: flex; align-items: center; gap: 20px">
+<a class="nav-a" href="tel:+37367101809" style="font-size: 13px; line-height: 16px; font-weight: 500; font-variant-numeric: tabular-nums">067 101 809</a>
+<a class="pill" href="#cerere" style="display: inline-flex; align-items: center; height: 28px; padding: 0 14px; border-radius: 999px; background: #111111; color: #FFFFFF; text-decoration: none; font-size: 13px; font-weight: 600">Cere ofertă</a>
+</div>
+</header>
+<div data-name="Bară pagină" style="position: sticky; top: 48px; z-index: 25; width: 1440px; box-sizing: border-box; height: 52px; padding: 0 120px; background: rgba(245,245,247,0.85); -webkit-backdrop-filter: saturate(180%) blur(20px); backdrop-filter: saturate(180%) blur(20px); border-bottom: 1px solid rgba(0,0,0,0.06); display: flex; align-items: center; justify-content: space-between">
+<span style="font-size: 21px; line-height: 26px; font-weight: 600; letter-spacing: -0.01em">Agende 2027</span>
+<div style="display: flex; align-items: center; gap: 28px; font-size: 13px; line-height: 16px; font-weight: 500">
+<a class="nav-a" href="#prezentare">Prezentare</a>
+<a class="nav-a" href="#colectii">Colecții</a>
+<a class="nav-a" href="#personalizare">Personalizare</a>
+
+</div>
+</div>
+<div id="prezentare"></div>
+<section aria-label="Hero" data-name="Hero" style="width: 1440px; box-sizing: border-box; padding: 96px 0 96px; background: #FFFFFF; color: #111111; display: flex; flex-direction: column; align-items: center; text-align: center">
+<div class="reveal" style="display: flex; flex-direction: column; align-items: center">
+<span style="display: inline-flex; padding: 4px 12px; border-radius: 999px; background: #FFCA01; color: #111111; font-size: 13px; line-height: 18px; font-weight: 600">Nou</span>
+<h1 style="margin: 16px 0 0; width: 980px; font-size: 72px; line-height: 76px; font-weight: 600; letter-spacing: -0.02em; text-wrap: balance">Agende 2027</h1>
+<p style="margin: 20px 0 0; width: 760px; font-size: 24px; line-height: 32px; font-weight: 400; color: #3A3A3C; text-wrap: balance">O impresie care rămâne, tot anul</p>
+<p style="margin: 16px 0 0; width: 680px; font-size: 19px; line-height: 28px; color: #6E6E73; text-wrap: balance">Agende de calitate europeană, cu logo-ul companiei voastre pe copertă</p>
+<div style="display: flex; align-items: center; gap: 32px; margin-top: 36px"><a class="pill" href="#cerere" style="display: inline-flex; align-items: center; height: 46px; padding: 0 26px; border-radius: 999px; background: #111111; color: #FFFFFF; text-decoration: none; font-size: 17px; font-weight: 600">Cere ofertă</a><a class="lnk" href="#colectii" style="font-size: 17px; line-height: 24px; font-weight: 500">Vezi colecțiile ›</a></div>
+</div>
+<div class="reveal" style="margin-top: 64px; display: flex; justify-content: center"><div class="ph" style="width: 560px; height: 373px; border-radius: 18px; overflow: hidden; flex-shrink: 0"><img src="img/agende-trio.jpg" alt="Trei agende: gri, roșie și bleumarin" style="width: 100%; height: 100%; object-fit: cover; object-position: 50% 50%; display: block"></div></div>
+</section>
+<section aria-label="Pe scurt" data-name="Pe scurt" style="width: 1440px; box-sizing: border-box; padding: 120px; background: #F5F5F7;">
+<h2 class="reveal" style="margin: 0; font-size: 48px; line-height: 52px; font-weight: 600; letter-spacing: -0.02em">Pe scurt, <span style="color: #86868B">de ce agendele Alvia?</span></h2>
+<div class="reveal" style="margin-top: 48px; display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 20px">
+<article style="background: #FFFFFF; border-radius: 18px; padding: 32px 28px 36px"><h3 style="margin: 0; font-size: 21px; line-height: 26px; font-weight: 600">Made in Europa</h3><p style="margin: 10px 0 0; font-size: 17px; line-height: 25px; color: #6E6E73">Hârtie de calitate și coperți rezistente, care arată bine ani de zile</p></article><article style="background: #FFFFFF; border-radius: 18px; padding: 32px 28px 36px"><h3 style="margin: 0; font-size: 21px; line-height: 26px; font-weight: 600">Logo-ul vostru pe copertă</h3><p style="margin: 10px 0 0; font-size: 17px; line-height: 25px; color: #6E6E73">Embosat, gravat cu laser sau imprimat full-color</p></article><article style="background: #FFFFFF; border-radius: 18px; padding: 32px 28px 36px"><h3 style="margin: 0; font-size: 21px; line-height: 26px; font-weight: 600">Asortiment de culori</h3><p style="margin: 10px 0 0; font-size: 17px; line-height: 25px; color: #6E6E73">Culori clasice și moderne, potrivite brandului vostru</p></article><article style="background: #FFFFFF; border-radius: 18px; padding: 32px 28px 36px"><h3 style="margin: 0; font-size: 21px; line-height: 26px; font-weight: 600">Gata de oferit</h3><p style="margin: 10px 0 0; font-size: 17px; line-height: 25px; color: #6E6E73">Ambalate în cutii, gata pentru a fi livrate partenerilor și echipei</p></article>
+</div>
+</section>
+<section id="colectii" aria-label="Colecții" data-name="Colecții" style="width: 1440px; box-sizing: border-box; padding: 120px; background: #FFFFFF;">
+<h2 class="reveal" style="margin: 0; font-size: 48px; line-height: 52px; font-weight: 600; letter-spacing: -0.02em">Colecțiile 2027 <span style="color: #86868B">Alegeți modelul, noi adăugăm logo-ul</span></h2>
+<div style="margin-top: 64px"><div class="reveal" style="display: grid; grid-template-columns: 600px minmax(0, 1fr); gap: 80px; align-items: center">
+<div class="ph" style="width: 600px; height: 309px; border-radius: 18px; overflow: hidden; flex-shrink: 0"><img src="img/edica-render.jpg" alt="Colecția EDICA 2027" style="width: 100%; height: 100%; object-fit: cover; object-position: 50% 50%; display: block"></div>
+<div>
+<div style="font-size: 15px; line-height: 20px; font-weight: 600; color: #6E6E73">Nou · în parteneriat cu EDICA</div>
+<h3 style="margin: 8px 0 0; font-size: 40px; line-height: 44px; font-weight: 600; letter-spacing: -0.02em">Colecția EDICA 2027</h3>
+<p style="margin: 14px 0 0; max-width: 480px; font-size: 19px; line-height: 28px; color: #3A3A3C">Coperți texturate, elastic de închidere și modele cu spațiu dedicat pentru logo-ul companiei</p>
+<img src="img/edica-logo-dark.png" alt="EDICA" style="margin-top: 28px; height: 18px; width: auto; display: block"><div style="margin-top: 28px"><a class="pill" href="https://www.edica.pl/" target="_blank" rel="noopener" style="display: inline-flex; align-items: center; height: 46px; padding: 0 26px; border-radius: 999px; background: #111111; color: #FFFFFF; text-decoration: none; font-size: 17px; font-weight: 600">Vedeți agendele</a></div>
+</div>
+</div></div>
+</section>
+<section aria-label="Eco Standart" data-name="Eco Standart" style="width: 1440px; box-sizing: border-box; padding: 120px; background: #F5F5F7;">
+<div class="pk reveal" style="display: grid; grid-template-columns: 600px minmax(0, 1fr); gap: 80px; align-items: center">
+<input class="pk-r" type="radio" name="eco" id="eco-0" checked aria-label="Gri"><input class="pk-r" type="radio" name="eco" id="eco-1" aria-label="Albastru"><input class="pk-r" type="radio" name="eco" id="eco-2" aria-label="Verde"><input class="pk-r" type="radio" name="eco" id="eco-3" aria-label="Roșu"><input class="pk-r" type="radio" name="eco" id="eco-4" aria-label="Maro">
+<div class="pk-stage" style="width: 600px; height: 440px; border-radius: 18px; background: #FFFFFF; display: flex; align-items: center; justify-content: center"><img class="pk-i eco-i0" src="img/agenda-8710.jpg" alt="Agendă Gri" style="width: 236px; height: 334px; object-fit: cover; border-radius: 12px"><img class="pk-i eco-i1" src="img/agenda-8715.jpg" alt="Agendă Albastru" style="width: 236px; height: 334px; object-fit: cover; border-radius: 12px"><img class="pk-i eco-i2" src="img/agenda-8716.jpg" alt="Agendă Verde" style="width: 236px; height: 334px; object-fit: cover; border-radius: 12px"><img class="pk-i eco-i3" src="img/agenda-8723.jpg" alt="Agendă Roșu" style="width: 236px; height: 334px; object-fit: cover; border-radius: 12px"><img class="pk-i eco-i4" src="img/agenda-8725.jpg" alt="Agendă Maro" style="width: 236px; height: 334px; object-fit: cover; border-radius: 12px"></div>
+<div class="pk-info">
+<div>
+<div style="font-size: 15px; line-height: 20px; font-weight: 600; color: #6E6E73">5 culori</div>
+<h3 style="margin: 8px 0 0; font-size: 40px; line-height: 44px; font-weight: 600; letter-spacing: -0.02em">Eco Standart</h3>
+<p style="margin: 14px 0 0; max-width: 480px; font-size: 19px; line-height: 28px; color: #3A3A3C">Copertă texturată, în cinci culori. Ideală pentru logo embosat</p>
+
+</div>
+<div style="margin-top: 32px; font-size: 14px; line-height: 20px; color: #6E6E73">Culori</div>
+<div style="margin-top: 12px; display: flex; gap: 14px; padding: 4px"><label class="sw" for="eco-0" title="Gri" style="width: 28px; height: 28px; border-radius: 999px; background: #616161; box-shadow: inset 0 0 0 1px rgba(0,0,0,0.12)"></label><label class="sw" for="eco-1" title="Albastru" style="width: 28px; height: 28px; border-radius: 999px; background: #4A5267; box-shadow: inset 0 0 0 1px rgba(0,0,0,0.12)"></label><label class="sw" for="eco-2" title="Verde" style="width: 28px; height: 28px; border-radius: 999px; background: #275E46; box-shadow: inset 0 0 0 1px rgba(0,0,0,0.12)"></label><label class="sw" for="eco-3" title="Roșu" style="width: 28px; height: 28px; border-radius: 999px; background: #AB3840; box-shadow: inset 0 0 0 1px rgba(0,0,0,0.12)"></label><label class="sw" for="eco-4" title="Maro" style="width: 28px; height: 28px; border-radius: 999px; background: #685B49; box-shadow: inset 0 0 0 1px rgba(0,0,0,0.12)"></label></div>
+<div style="margin-top: 14px; font-size: 17px; line-height: 24px; font-weight: 600"><span class="pk-n eco-n0">Gri · cod 8710</span><span class="pk-n eco-n1">Albastru · cod 8715</span><span class="pk-n eco-n2">Verde · cod 8716</span><span class="pk-n eco-n3">Roșu · cod 8723</span><span class="pk-n eco-n4">Maro · cod 8725</span></div>
+
+</div>
+</div>
+</section>
+<section aria-label="Lux-Ecru" data-name="Lux-Ecru" style="width: 1440px; box-sizing: border-box; padding: 120px; background: #FFFFFF;">
+<div class="pk reveal" style="display: grid; grid-template-columns: 600px minmax(0, 1fr); gap: 80px; align-items: center">
+<input class="pk-r" type="radio" name="lux" id="lux-0" checked aria-label="Gri"><input class="pk-r" type="radio" name="lux" id="lux-1" aria-label="Verde închis"><input class="pk-r" type="radio" name="lux" id="lux-2" aria-label="Bleumarin"><input class="pk-r" type="radio" name="lux" id="lux-3" aria-label="Olive"><input class="pk-r" type="radio" name="lux" id="lux-4" aria-label="Bej"><input class="pk-r" type="radio" name="lux" id="lux-5" aria-label="Maro">
+<div class="pk-stage" style="width: 600px; height: 440px; border-radius: 18px; background: #F5F5F7; display: flex; align-items: center; justify-content: center"><img class="pk-i lux-i0" src="img/luxecru-1.jpg" alt="Agendă Gri" style="width: 300px; height: 293px; object-fit: cover; border-radius: 12px"><img class="pk-i lux-i1" src="img/luxecru-2.jpg" alt="Agendă Verde închis" style="width: 300px; height: 293px; object-fit: cover; border-radius: 12px"><img class="pk-i lux-i2" src="img/luxecru-3.jpg" alt="Agendă Bleumarin" style="width: 300px; height: 293px; object-fit: cover; border-radius: 12px"><img class="pk-i lux-i3" src="img/luxecru-4.jpg" alt="Agendă Olive" style="width: 300px; height: 293px; object-fit: cover; border-radius: 12px"><img class="pk-i lux-i4" src="img/luxecru-5.jpg" alt="Agendă Bej" style="width: 300px; height: 293px; object-fit: cover; border-radius: 12px"><img class="pk-i lux-i5" src="img/luxecru-6.jpg" alt="Agendă Maro" style="width: 300px; height: 293px; object-fit: cover; border-radius: 12px"></div>
+<div class="pk-info">
+<div>
+<div style="font-size: 15px; line-height: 20px; font-weight: 600; color: #6E6E73">6 culori</div>
+<h3 style="margin: 8px 0 0; font-size: 40px; line-height: 44px; font-weight: 600; letter-spacing: -0.02em">Lux-Ecru</h3>
+<p style="margin: 14px 0 0; max-width: 480px; font-size: 19px; line-height: 28px; color: #3A3A3C">Copertă bicoloră cu model în relief. Aspect premium pentru cadouri</p>
+
+</div>
+<div style="margin-top: 32px; font-size: 14px; line-height: 20px; color: #6E6E73">Culori</div>
+<div style="margin-top: 12px; display: flex; gap: 14px; padding: 4px"><label class="sw" for="lux-0" title="Gri" style="width: 28px; height: 28px; border-radius: 999px; background: #5D5E58; box-shadow: inset 0 0 0 1px rgba(0,0,0,0.12)"></label><label class="sw" for="lux-1" title="Verde închis" style="width: 28px; height: 28px; border-radius: 999px; background: #28333B; box-shadow: inset 0 0 0 1px rgba(0,0,0,0.12)"></label><label class="sw" for="lux-2" title="Bleumarin" style="width: 28px; height: 28px; border-radius: 999px; background: #242C39; box-shadow: inset 0 0 0 1px rgba(0,0,0,0.12)"></label><label class="sw" for="lux-3" title="Olive" style="width: 28px; height: 28px; border-radius: 999px; background: #8A8760; box-shadow: inset 0 0 0 1px rgba(0,0,0,0.12)"></label><label class="sw" for="lux-4" title="Bej" style="width: 28px; height: 28px; border-radius: 999px; background: #A28268; box-shadow: inset 0 0 0 1px rgba(0,0,0,0.12)"></label><label class="sw" for="lux-5" title="Maro" style="width: 28px; height: 28px; border-radius: 999px; background: #603A28; box-shadow: inset 0 0 0 1px rgba(0,0,0,0.12)"></label></div>
+<div style="margin-top: 14px; font-size: 17px; line-height: 24px; font-weight: 600"><span class="pk-n lux-n0">Gri</span><span class="pk-n lux-n1">Verde închis</span><span class="pk-n lux-n2">Bleumarin</span><span class="pk-n lux-n3">Olive</span><span class="pk-n lux-n4">Bej</span><span class="pk-n lux-n5">Maro</span></div>
+
+</div>
+</div>
+</section>
+<section aria-label="Eco Lux" data-name="Eco Lux" style="width: 1440px; box-sizing: border-box; padding: 120px; background: #F5F5F7;">
+<div class="pk reveal" style="display: grid; grid-template-columns: 600px minmax(0, 1fr); gap: 80px; align-items: center">
+<input class="pk-r" type="radio" name="ecolux" id="ecolux-0" checked aria-label="Gri"><input class="pk-r" type="radio" name="ecolux" id="ecolux-1" aria-label="Roșu"><input class="pk-r" type="radio" name="ecolux" id="ecolux-2" aria-label="Bleumarin">
+<div class="pk-stage" style="width: 600px; height: 440px; border-radius: 18px; background: #FFFFFF; display: flex; align-items: center; justify-content: center"><img class="pk-i ecolux-i0" src="img/ecolux-gri.jpg" alt="Agendă Gri" style="width: 240px; height: 360px; object-fit: cover; border-radius: 12px"><img class="pk-i ecolux-i1" src="img/ecolux-rosu.jpg" alt="Agendă Roșu" style="width: 240px; height: 360px; object-fit: cover; border-radius: 12px"><img class="pk-i ecolux-i2" src="img/ecolux-bleumarin.jpg" alt="Agendă Bleumarin" style="width: 240px; height: 360px; object-fit: cover; border-radius: 12px"></div>
+<div class="pk-info">
+<div>
+<div style="font-size: 15px; line-height: 20px; font-weight: 600; color: #6E6E73">3 culori</div>
+<h3 style="margin: 8px 0 0; font-size: 40px; line-height: 44px; font-weight: 600; letter-spacing: -0.02em">Eco Lux</h3>
+<p style="margin: 14px 0 0; max-width: 480px; font-size: 19px; line-height: 28px; color: #3A3A3C">Copertă eco cu textură fină, pentru un aspect elegant și discret</p>
+
+</div>
+<div style="margin-top: 32px; font-size: 14px; line-height: 20px; color: #6E6E73">Culori</div>
+<div style="margin-top: 12px; display: flex; gap: 14px; padding: 4px"><label class="sw" for="ecolux-0" title="Gri" style="width: 28px; height: 28px; border-radius: 999px; background: #4A4A4C; box-shadow: inset 0 0 0 1px rgba(0,0,0,0.12)"></label><label class="sw" for="ecolux-1" title="Roșu" style="width: 28px; height: 28px; border-radius: 999px; background: #B3262C; box-shadow: inset 0 0 0 1px rgba(0,0,0,0.12)"></label><label class="sw" for="ecolux-2" title="Bleumarin" style="width: 28px; height: 28px; border-radius: 999px; background: #26365A; box-shadow: inset 0 0 0 1px rgba(0,0,0,0.12)"></label></div>
+<div style="margin-top: 14px; font-size: 17px; line-height: 24px; font-weight: 600"><span class="pk-n ecolux-n0">Gri</span><span class="pk-n ecolux-n1">Roșu</span><span class="pk-n ecolux-n2">Bleumarin</span></div>
+
+</div>
+</div>
+</section>
+<section id="personalizare" aria-label="Personalizare" data-name="Personalizare" style="width: 1440px; box-sizing: border-box; padding: 120px; background: #FFFFFF;">
+<div class="reveal" style="display: flex; align-items: flex-end; justify-content: space-between; gap: 40px"><h2 class="reveal" style="margin: 0; font-size: 48px; line-height: 52px; font-weight: 600; letter-spacing: -0.02em">Personalizare <span style="color: #86868B">Trei moduri de a aplica logo-ul</span></h2><a class="lnk" href="tehnologii.html" style="font-size: 17px; line-height: 24px; font-weight: 500; padding-bottom: 6px; flex-shrink: 0">Toate cele 10 tehnologii ›</a></div>
+<div class="reveal" style="margin-top: 48px; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px"><article style="background: #F5F5F7; border-radius: 18px; overflow: hidden"><div class="ph" style="width: 386px; height: 260px; border-radius: 0px; overflow: hidden; flex-shrink: 0"><img src="img/tech2-embosare.jpg" alt="Monogramă embosată pe piele" style="width: 100%; height: 100%; object-fit: cover; object-position: 50% 50%; display: block"></div><div style="padding: 24px 28px 32px"><h3 style="margin: 0; font-size: 24px; line-height: 30px; font-weight: 600">Embosare</h3><p style="margin: 8px 0 0; font-size: 17px; line-height: 25px; color: #6E6E73">Logo presat în relief, discret și elegant. Cea mai cerută variantă pentru agende</p></div></article><article style="background: #F5F5F7; border-radius: 18px; overflow: hidden"><div class="ph" style="width: 386px; height: 260px; border-radius: 0px; overflow: hidden; flex-shrink: 0"><img src="img/pers-serigrafie.jpg" alt="Logo aplicat prin serigrafie pe copertă de agendă" style="width: 100%; height: 100%; object-fit: cover; object-position: 50% 50%; display: block"></div><div style="padding: 24px 28px 32px"><h3 style="margin: 0; font-size: 24px; line-height: 30px; font-weight: 600">Serigrafie</h3><p style="margin: 8px 0 0; font-size: 17px; line-height: 25px; color: #6E6E73">Aplicare permanentă și precisă, cu un aspect fin</p></div></article><article style="background: #F5F5F7; border-radius: 18px; overflow: hidden"><div class="ph" style="width: 386px; height: 260px; border-radius: 0px; overflow: hidden; flex-shrink: 0"><img src="img/pers-uv.jpg" alt="Huse de telefon imprimate cu tipar UV" style="width: 100%; height: 100%; object-fit: cover; object-position: 50% 50%; display: block"></div><div style="padding: 24px 28px 32px"><h3 style="margin: 0; font-size: 24px; line-height: 30px; font-weight: 600">Tipar UV</h3><p style="margin: 8px 0 0; font-size: 17px; line-height: 25px; color: #6E6E73">Logo în toate culorile brandului, imprimat direct pe copertă</p></div></article></div>
+</section>
+<section aria-label="Din portofoliu" data-name="Din portofoliu" style="width: 1440px; box-sizing: border-box; padding: 120px; background: #F5F5F7;">
+<div class="reveal" style="display: flex; align-items: flex-end; justify-content: space-between; gap: 40px"><h2 class="reveal" style="margin: 0; font-size: 48px; line-height: 52px; font-weight: 600; letter-spacing: -0.02em">Din portofoliu <span style="color: #86868B">Agende livrate clienților</span></h2><a class="lnk" href="portofoliu.html" style="font-size: 17px; line-height: 24px; font-weight: 500; padding-bottom: 6px; flex-shrink: 0">Vezi portofoliul ›</a></div>
+<div class="reveal" style="margin-top: 48px; display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 20px"><div class="ph" style="width: 285px; height: 220px; border-radius: 18px; overflow: hidden; flex-shrink: 0"><img src="img/g-edica-flat.jpg" alt="Agende EDICA cu logo pe copertă" style="width: 100%; height: 100%; object-fit: cover; object-position: 50% 50%; display: block"></div><div class="ph" style="width: 285px; height: 220px; border-radius: 18px; overflow: hidden; flex-shrink: 0"><img src="img/g-relief.jpg" alt="Monogramă în relief pe piele" style="width: 100%; height: 100%; object-fit: cover; object-position: 50% 50%; display: block"></div><div class="ph" style="width: 285px; height: 220px; border-radius: 18px; overflow: hidden; flex-shrink: 0"><img src="img/g-agende-logo.jpg" alt="Agende cu logo pe copertă" style="width: 100%; height: 100%; object-fit: cover; object-position: 50% 50%; display: block"></div><div class="ph" style="width: 285px; height: 220px; border-radius: 18px; overflow: hidden; flex-shrink: 0"><img src="img/g-logo-color.jpg" alt="Agende colorate cu logo imprimat" style="width: 100%; height: 100%; object-fit: cover; object-position: 50% 50%; display: block"></div></div>
+</section>
+<section aria-label="Cum comandați" data-name="Cum comandați" style="width: 1440px; box-sizing: border-box; padding: 120px; background: #FFFFFF;">
+<h2 class="reveal" style="margin: 0; font-size: 48px; line-height: 52px; font-weight: 600; letter-spacing: -0.02em">Cum comandați <span style="color: #86868B">Trei pași</span></h2>
+<ol class="reveal" style="margin: 48px 0 0; padding: 0; list-style: none; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 40px"><li style="border-top: 1px solid #D2D2D7; padding-top: 28px"><span style="font-size: 15px; line-height: 20px; font-weight: 600; color: #A23D97">Pasul 1</span><h3 style="margin: 10px 0 0; font-size: 28px; line-height: 34px; font-weight: 600; letter-spacing: -0.01em">Alegeți modelul</h3><p style="margin: 12px 0 0; font-size: 17px; line-height: 25px; color: #6E6E73">Colecția, culoarea și cantitatea de agende</p></li><li style="border-top: 1px solid #D2D2D7; padding-top: 28px"><span style="font-size: 15px; line-height: 20px; font-weight: 600; color: #A23D97">Pasul 2</span><h3 style="margin: 10px 0 0; font-size: 28px; line-height: 34px; font-weight: 600; letter-spacing: -0.01em">Trimiteți logo-ul</h3><p style="margin: 12px 0 0; font-size: 17px; line-height: 25px; color: #6E6E73">Vă pregătim macheta pentru aprobare înainte de producție</p></li><li style="border-top: 1px solid #D2D2D7; padding-top: 28px"><span style="font-size: 15px; line-height: 20px; font-weight: 600; color: #A23D97">Pasul 3</span><h3 style="margin: 10px 0 0; font-size: 28px; line-height: 34px; font-weight: 600; letter-spacing: -0.01em">Primiți agendele</h3><p style="margin: 12px 0 0; font-size: 17px; line-height: 25px; color: #6E6E73">Personalizate și ambalate, gata de oferit</p></li></ol>
+</section>
+<section id="cerere" aria-label="Cerere" data-name="Cerere" style="width: 1440px; box-sizing: border-box; padding: 120px; background: #F5F5F7;">
+<div style="display: grid; grid-template-columns: minmax(0, 1fr) 560px; gap: 80px; align-items: start">
+<div class="reveal">
+<h2 style="margin: 0; font-size: 48px; line-height: 52px; font-weight: 600; letter-spacing: -0.02em">Cere ofertă pentru agende</h2>
+<p style="margin: 18px 0 0; max-width: 500px; font-size: 21px; line-height: 30px; color: #3A3A3C">Spuneți-ne colecția, culoarea și cantitatea. Vă trimitem prețul și macheta</p>
+</div>
+<div class="reveal" style="display: flex; flex-direction: column; gap: 22px; padding-top: 6px"><div style="display: flex; flex-direction: column; gap: 4px"><span style="font-size: 14px; line-height: 20px; color: #6E6E73">Telefon</span><span style="font-size: 21px; line-height: 28px; font-weight: 600; font-variant-numeric: tabular-nums">+373 67 101 809</span></div><div style="display: flex; flex-direction: column; gap: 4px"><span style="font-size: 14px; line-height: 20px; color: #6E6E73">E-mail</span><span style="font-size: 21px; line-height: 28px; font-weight: 600; font-variant-numeric: tabular-nums">sales@suvenir.md</span></div><div style="display: flex; flex-direction: column; gap: 4px"><span style="font-size: 14px; line-height: 20px; color: #6E6E73">Adresă</span><span style="font-size: 21px; line-height: 28px; font-weight: 600; font-variant-numeric: tabular-nums">str. N. Zelinski 7, of. 201, Chișinău</span><a class="lnk" href="https://www.google.com/maps/search/?api=1&amp;query=str.+N.+Zelinski+7+Chi%C8%99in%C4%83u" style="font-size: 17px; line-height: 24px; font-weight: 500">Vezi pe hartă ›</a></div></div>
+</div>
+</section>
+<footer aria-label="Subsol" data-name="Subsol" style="width: 1440px; box-sizing: border-box; padding: 48px 120px 32px; background: #F5F5F7; border-top: 1px solid #D2D2D7; font-size: 13px; line-height: 18px; color: #6E6E73">
+<img src="img/logo-horizontal-black.svg" alt="Alvia" style="height: 18px; width: auto; display: block">
+<div style="margin-top: 32px; display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 40px">
+<nav aria-label="Produse" style="display: flex; flex-direction: column; gap: 10px"><span style="font-weight: 600; color: #111111">Produse</span><a class="nav-a" href="agende.html" style="color: #6E6E73">Agende 2027</a><a class="nav-a" href="tricouri.html" style="color: #6E6E73">Tricouri</a><a class="nav-a" href="craciun.html" style="color: #6E6E73">Cadouri de Crăciun</a><a class="nav-a" href="cataloage.html" style="color: #6E6E73">Cataloage</a></nav>
+<nav aria-label="Servicii" style="display: flex; flex-direction: column; gap: 10px"><span style="font-weight: 600; color: #111111">Servicii</span><a class="nav-a" href="tehnologii.html" style="color: #6E6E73">Tehnologii de aplicare</a><a class="nav-a" href="portofoliu.html" style="color: #6E6E73">Portofoliu</a><a class="nav-a" href="#cerere" style="color: #6E6E73">Cere ofertă</a></nav>
+<nav aria-label="Contacte" style="display: flex; flex-direction: column; gap: 10px"><span style="font-weight: 600; color: #111111">Contacte</span><a class="nav-a" href="tel:+37367101809" style="color: #6E6E73">+373 67 101 809</a><a class="nav-a" href="tel:+37367180280" style="color: #6E6E73">+373 67 180 280</a><a class="nav-a" href="mailto:sales@suvenir.md" style="color: #6E6E73">sales@suvenir.md</a><a class="nav-a" href="contacte.html" style="color: #6E6E73">str. N. Zelinski 7, of. 201, Chișinău</a></nav>
+<nav aria-label="Urmăriți-ne" style="display: flex; flex-direction: column; gap: 10px"><span style="font-weight: 600; color: #111111">Urmăriți-ne</span><a class="nav-a" href="https://www.instagram.com/" style="color: #6E6E73">Instagram</a><a class="nav-a" href="https://www.facebook.com/" style="color: #6E6E73">Facebook</a><a class="nav-a" href="https://www.tiktok.com/" style="color: #6E6E73">TikTok</a></nav>
+</div>
+<p style="margin: 40px 0 0; padding-bottom: 16px; border-bottom: 1px solid #D2D2D7">Alte moduri de a comanda: sunați la <a class="lnk" href="tel:+37367101809">+373 67 101 809</a> sau scrieți la <a class="lnk" href="mailto:sales@suvenir.md">sales@suvenir.md</a></p>
+<div style="margin-top: 16px; display: flex; justify-content: space-between"><span>© 2026 Alvia Grup SRL. Toate drepturile rezervate</span><span>suvenir.md</span></div>
+</footer>
+</div>
+
+<script>(function(){var d=document.documentElement;if(!("IntersectionObserver" in window))return;d.classList.add("js-reveal");var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add("in");io.unobserve(e.target);}});},{threshold:0.12});document.querySelectorAll(".reveal").forEach(function(el){io.observe(el);});})();</script>
+<script>(function(){if(window.innerWidth<760&&location.search.indexOf("desktop")<0){var p=location.pathname.split("/").pop()||"index.html";if(!/\.html$/.test(p))p="index.html";location.replace("m/"+p+location.hash);}})();</script>
+<script>(function(){function f(){var z=Math.min(1,window.innerWidth/1440);document.documentElement.style.zoom=z;}f();window.addEventListener("resize",f);})();</script>
+</body>
+</html>
